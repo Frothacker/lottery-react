@@ -5,3 +5,4 @@ const abi = [{"constant":true,"inputs":[],"name":"manager","outputs":[{"name":""
 
 export default new web3.eth.Contract(abi, address); 
 
+// These need to be updated every time you re-deploy the contract

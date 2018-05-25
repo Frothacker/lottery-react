@@ -3,29 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import web3 from './web3';
 import lottery from './lottery';
-// allows us to communicate with the contract on rinkeby test network with the
-// interface(ABI) has created in ./lottery (local to the react app)
-//compared to calling into ganache that we used for running mocha tests. 
- 
-// Difference between test and our app is:
-// the test file deploys and calls into ganache, 
-// which gives us the ABI to communicate with our contract on ganache
-// However our app deploys in deploy.js, 
-//    and out react app cannot access the ABI created by that deployment,
-//        because they're in two different folders 
-//        (info transfer between them isn't supported)
-//
-//  so to communicate to the already deployed contract, 
-//    we re-create the ABI (in ./lottery)
-
-//  now we can call through the metamask provider (from ./web), 
-//  using the ABI natively generated in our app. 
-//              
-//  we had to natively generate it becasue we can't acess the ABI
-//  created by the deploy file because our app is made in a different folder.  
-//    
-
-
+  
 class App extends Component {
   state = {
     manager: '',
